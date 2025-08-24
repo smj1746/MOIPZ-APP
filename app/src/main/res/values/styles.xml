@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 앱 기본 테마: 머티리얼 컴포넌트 NoActionBar -->
+    <style name="Theme.MOIPZApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/moipz_primary</item>
+        <item name="colorPrimaryVariant">@color/moipz_primary_dark</item>
+        <item name="colorSecondary">@color/moipz_secondary</item>
+        <item name="android:statusBarColor">@color/moipz_primary_dark</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <!-- (선택) 전역 배경 -->
+        <!-- <item name="android:windowBackground">@color/your_background</item> -->
+    </style>
+
+    <style name="Closet.CategoryIcon">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+</resources>
