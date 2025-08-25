@@ -41,4 +41,4 @@ public class ClosetAdapter extends RecyclerView.Adapter<ClosetAdapter.VH> {
     }
 }
 
-}
+
