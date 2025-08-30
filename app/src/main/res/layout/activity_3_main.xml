@@ -161,7 +161,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="오늘의 BEST & WORST 코디"
+                            android:text="오늘의 BEST &amp; WORST 코디"
                             android:textColor="@color/moipz_accent"
                             android:textStyle="bold" />
                     </FrameLayout>

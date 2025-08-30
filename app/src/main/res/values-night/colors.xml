@@ -8,6 +8,4 @@
     <color name="moipz_surface">#1E1E1E</color>
     <color name="moipz_text">#EEEEEE</color>
 
-    <!-- 별칭도 야간에 동일하게 동작 -->
-    <color name="moipz_accent">@color/moipz_secondary</color>
 </resources>

@@ -224,14 +224,29 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="12dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <!-- 필요 시 실제 내용으로 교체 -->
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• 선호 색상"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• 선호 스타일"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• 선호 브랜드"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• 주요활동 장소(요일, 시간대 별)"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• 선호 색상" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• 선호 스타일" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• 선호 브랜드" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• 주요활동 장소(요일, 시간대 별)" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 

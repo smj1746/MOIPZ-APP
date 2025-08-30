@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Material3 기반 앱 테마 -->
+    <!-- 앱 기본 테마: Material3 -->
     <style name="Theme.MOIPZApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- (선택) 포인트 컬러 -->
+        <!-- 포인트 컬러(필요에 따라 moipz_primary로 바꿔도 됨) -->
         <item name="colorPrimary">@color/moipz_green_500</item>
         <item name="colorOnPrimary">@android:color/white</item>
-        <!-- (선택) 시스템 바 색 -->
+
+        <!-- 시스템 바 색 -->
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
     </style>
 </resources>

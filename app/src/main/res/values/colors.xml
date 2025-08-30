@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Canonical Palette -->
-    <color name="moipz_primary">#2F4F4F</color>
-    <color name="moipz_primary_dark">#1E3535</color>
-    <color name="moipz_secondary">#00C2A9</color>
+    <color name="moipz_primary">#93B5B5</color>
+    <color name="moipz_primary_dark">#6A8C8C</color>
+    <color name="moipz_secondary">#00A08F</color>
 
-    <color name="moipz_bg">#A5F2CF</color>
-    <color name="moipz_surface">#FFFFFFFF</color>
-    <color name="moipz_text">#222222</color>
+    <color name="moipz_bg">#0F1A1A</color>
+    <color name="moipz_surface">#1E1E1E</color>
+    <color name="moipz_text">#EEEEEE</color>
 
-    <color name="moipz_green_500">#2E7D32</color>
-
-    <color name="detail_card_gray">#D9D9D9</color>  <!-- 연회색 -->
-
-
-    <!-- 과거 @color/moipz_accent 호환용 별칭(있으면 유지, 없으면 생략 가능) -->
-    <color name="moipz_accent">@color/moipz_secondary</color>
 </resources>
