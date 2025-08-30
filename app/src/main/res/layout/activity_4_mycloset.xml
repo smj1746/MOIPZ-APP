@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7BFFB0">
+
+    <!-- ───────── 상단 검색 + 메뉴 ───────── -->
+    <LinearLayout
+        android:id="@+id/searchRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 검색창 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="검색어 입력"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:paddingEnd="40dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@android:drawable/ic_menu_search"
+                    android:contentDescription="@null"
+                    android:importantForAccessibility="no"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 메뉴 버튼 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/ic_menu_24"
+                android:contentDescription="@string/nav_menu"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ───────── 스크롤 본문 ───────── -->
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/searchRow"
+        app:layout_constraintBottom_toTopOf="@id/customBottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- 큰 옷장 카드 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/closetHeroCard"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/imgClosetHero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/my_closet"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:importantForAccessibility="no"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 우상단 '옷 추가' 버튼(카드 위 오른쪽 공간에 뜨도록 margin) -->
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabAddCloth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="-64dp"
+                android:text="옷 추가"
+                android:textColor="@android:color/white"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:backgroundTint="@color/moipz_primary"
+                app:iconTint="@android:color/white"/>
+
+            <!-- 카테고리 아이콘 스트립 -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 아이콘은 나중에 교체 가능 (기본 아이콘으로 안전하게 구성) -->
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_sort_by_size" android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_crop"          android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_gallery"       android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_camera"        android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_week"          android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_agenda"        android:contentDescription="@null"/>
+                    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="6dp" android:src="@android:drawable/ic_menu_manage"        android:contentDescription="@null"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 로고 배너(가로 꽉 차게) -->
+            <ImageView
+                android:id="@+id/logoBanner"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_logo_description"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no"/>
+
+            <!-- 설명문 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="세상에 있는 모든 옷장 중 마지막 옷장의 옷을 찾아 입는 그날까지!\n나만의 옷장, MOIP-Z 앱"
+                android:textColor="@color/moipz_bg"/>
+
+            <!-- 내 옷 그리드(필요시 표시) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCloset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ───────── 하단 커스텀 이미지 내비 ───────── -->
+    <FrameLayout
+        android:id="@+id/customBottomBar"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/navigation_bar"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/nav_bar"
+            android:importantForAccessibility="no"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/hitMenu"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:clickable="true" android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/nav_menu"/>
+
+            <View android:id="@+id/hitBest"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:clickable="true" android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/nav_best"/>
+
+            <View android:id="@+id/hitHome"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:clickable="true" android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/nav_home"/>
+
+            <View android:id="@+id/hitFriends"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:clickable="true" android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/nav_friends"/>
+
+            <View android:id="@+id/hitMy"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:clickable="true" android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/nav_my"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+# Gradle
+.gradle/
+**/build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+local.properties
+
+# Native / NDK
+.cxx/
+.externalNativeBuild/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keystore & signing (절대 올리지 말 것)
+*.jks
+*.keystore
+signing.properties
+keystore.properties
+
+# Outputs (원하면 LFS 사용)
+*.apk
+*.aab
+
+# Captures
+captures/
+
+# Kotlin/Java
+out/

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902964040507",
+    "project_id": "moipz-app",
+    "storage_bucket": "moipz-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902964040507:android:986d243ebb5343c21c1d1e",
+        "android_client_info": {
+          "package_name": "com.example.moipz_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv9waZkiUpU0Pk8rviGY1oOiMq3ThUwEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

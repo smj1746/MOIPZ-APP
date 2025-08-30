@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 앱 기본 -->
+    <string name="app_name">MOIP-Z</string>
+
+    <!-- 화면 타이틀 -->
+    <string name="main_title">메인</string>
+    <string name="closet_title">나의 옷장</string>
+    <string name="recommend_title">코디 추천</string>
+    <string name="price_title">브랜드 가격비교</string>
+    <string name="feed_title">친구 피드</string>
+    <string name="mypage_title">마이페이지</string>
+    <string name="settings_title">설정</string>
+
+    <!-- 레이아웃에서 쓰는 공용 문자열 -->
+    <string name="search_hint">검색어 입력</string>
+    <string name="menu_button_desc">메뉴 열기</string>
+    <string name="app_logo_description">MOIP-Z 앱 로고 배너</string>
+
+    <!-- 하단 내비게이션 접근성 텍스트 -->
+    <string name="nav_bar">하단 내비게이션 바</string>
+    <string name="nav_menu">메뉴</string>
+    <string name="nav_best">코디 추천</string>
+    <string name="nav_home">홈</string>
+    <string name="nav_friends">친구</string>
+    <string name="nav_my">내 정보</string>
+</resources>
+

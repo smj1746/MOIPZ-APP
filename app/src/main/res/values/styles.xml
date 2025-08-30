@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 예: 옷장 카테고리 아이콘 공용 스타일 -->
+    <style name="Closet.CategoryIcon">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">6dp</item>
+        <!-- RTL 대응: marginRight 대신 marginEnd -->
+        <item name="android:layout_marginEnd">6dp</item>
+    </style>
+</resources>
