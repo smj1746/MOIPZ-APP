@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_1_login)
 
         usernameInput = findViewById(R.id.editTextUsername)
         passwordInput = findViewById(R.id.editTextPassword)
@@ -25,16 +25,15 @@ class LoginActivity : AppCompatActivity() {
         signUpLink = findViewById(R.id.textSignUp)
         forgotPasswordLink = findViewById(R.id.textForgotPassword)
 
-        loginButton.setOnClickListener {
-            val username = usernameInput.text.toString().trim()
-            val password = passwordInput.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "아이디와 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show()
-            } else {
-                // 로그인 API 호출 및 처리 로직 추가
-                Toast.makeText(this, "로그인 시도 중...", Toast.LENGTH_SHORT).show()
+        btnLogin.setOnClickListener {
+            // TODO: 실제 로그인 검증 로직
+            val i = Intent(this, MainActivity::class.java).apply {
+                // 뒤로가기 시 로그인 화면 안 보이게 (선택)
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             }
+            startActivity(i)
+            // finish() // 위 플래그 쓰면 없어도 됨
         }
 
         signUpLink.setOnClickListener {
