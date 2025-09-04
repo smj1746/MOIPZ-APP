@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9BF7C9">
+
+    <!-- 상단 검색바 -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="검색어 입력"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/search_edittext_bg"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"/>
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/search_button_desc"/>
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_menu_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_button_desc"/>
+    </LinearLayout>
+
+    <!-- 스크롤 콘텐츠 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/navigationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- 공지 & BEST/WORST - 카드 2분할 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/noticeCard"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="18dp"
+                    app:strokeColor="#EEEEEE"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_announcement_blue_48dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="공지사항"
+                            android:textColor="#000"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 점선 구분 -->
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/divider_dashed"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/bestWorstCard"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="18dp"
+                    app:strokeColor="#EEEEEE"
+                    app:strokeWidth="1dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sample_outfit_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:layout_margin="8dp"
+                            android:text="오늘의 BEST and WORST 코디"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- 아이콘 배너 (가로 스크롤) -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="4dp">
+
+                    <!-- 필요한 만큼 복제 -->
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_cloth_1"/>
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_cloth_2"/>
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_cloth_3"/>
+                    <!-- ... -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 캐치프레이즈 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="세상에 있는 모든 옷장 중 마지막 옷장의 옷을 찾아 입는 그 날까지! 나만의 옷장, MOIP-Z 앱"
+                android:textColor="#000"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 하단 내비게이션 바 (기존 그대로) -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- (너가 쓰던 navList/navRecommend/navHome/navFriends/navProfile 그대로 복붙) -->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
