@@ -1,0 +1,32 @@
+{
+	"extends": [
+		"config:recommended",
+		":preserveSemverRanges",
+		"group:allNonMajor",
+		":semanticCommitTypeAll(chore)"
+	],
+	"pin": {
+		"enabled": false
+	},
+	"ignoreDeps": [
+		"@types/node",
+		"esbuild",
+		"rollup",
+		"typescript"
+	],
+	"ignorePaths": [
+		"**/create-svelte/shared/**",
+		"**/create-svelte/templates/**"
+	],
+	"packageRules": [
+		{
+			"matchPackageNames": [
+				"vite"
+			],
+			"matchUpdateTypes": [
+				"major"
+			],
+			"enabled": false
+		}
+	]
+}
