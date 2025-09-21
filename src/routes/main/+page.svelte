@@ -297,13 +297,6 @@
         line-height: 1.4;
     }
 
-    .sub-text {
-        font-size: 16px;
-        font-weight: bold;
-        color: #ff6b35;
-        margin: 0 0 8px 0;
-    }
-
     .app-text {
         font-size: 12px;
         color: #666;
